@@ -30,14 +30,7 @@
             <img src="@/assets/images/header/ico_account_gray.svg">
             <span>Tài khoản</span>
           </div>
-          <div class="function-item">
-            <div class="language-container">
-              <div class="image-item">
-                <img src="@/assets/images/header/default.svg" alt="icon" width="34px" height="22px">
-                <img src="@/assets/images/header/icon_seemore_gray.svg" class="ml-1" alt="icon">
-              </div>
-            </div>
-          </div>
+          <PopupLanguage />
         </div>
       </div>
     </div>
@@ -46,9 +39,10 @@
 
 <script lang="ts">
 import {defineComponent} from "vue";
+import PopupLanguage from "@/components/layouts/header/HeaderDesktop/PopupLanguage/PopupLanguage.vue";
 
 export default defineComponent({
-
+  components: {PopupLanguage}
 });
 </script>
 
@@ -75,7 +69,7 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
+  height: 68px;
   margin-left: 20px;
 }
 
@@ -86,22 +80,6 @@ export default defineComponent({
   align-items: center;
   width: 72px;
   font-size: 15px;
-}
-
-.language-container {
-  position: relative;
-  height: 40px;
-  border: 1px solid var(--main-border-color);
-  border-radius: 10px;
-  width: 70px;
-}
-
-.language-container .image-item {
-  display: flex;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .form-search {
@@ -117,7 +95,7 @@ export default defineComponent({
 .form-search input {
   height: 20px;
   margin-left: 15px;
-  width: 472px;
+  width: 470px;
   border: none !important;
   outline: none;
   font-size: 15px;
